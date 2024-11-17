@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+:root {
+  font-family: 'inter', sans-serif;
+}
+
+.container {
+  max-width: 60rem;
+}
+
+.wave__loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#Line_1 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+#Line_2 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+#Line_3 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+}
+
+#Line_4 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+#Line_5 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+
+#Line_6 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+#Line_7 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 1.05s;
+  animation-delay: 1.05s;
+}
+
+#Line_8 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+#Line_9 {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+  -webkit-animation-delay: 1.35s;
+  animation-delay: 1.35s;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: scaleY(0.7);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 50% 50%;
+  }
+}
+
+.audio-container {
+  background-color: #ffffff; /* Set background of container to transparent */
+  border-radius: 30px;
+}
+audio {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+  background-color: #c6c6ec00;
+  width: 100%;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #c8278d;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: #4dff4d;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  color: #000000;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  color: #000000;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #c8278d;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+audio::-webkit-media-controls-volume-control-container {
+  background-color: #c8278d;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@layer components {
+  .inner-content {
+    /* Define your styles here */
+  }
+
+  .custom_background {
+    @apply relative p-5 h-full inner-content rounded-[1.5rem] bg-[#05072d] border-white/15 before:rounded-[1.5rem] before:absolute before:inset-0 before:border-t before:border-white  before:border-white/20 before:bg-gradient-to-b before:from-white/10 before:to-transparent before:shadow before:shadow-gray-950;
+  }
+
+  .custom_button {
+    @apply relative px-5 py-2 inline-flex items-center gap-2 w-full h-full text-white text-sm focus-within:ring-2 focus-within:ring-transparent hover:ring-1 hover:ring-orange-400 rounded-full bg-gradient-to-r from-[#c8278d] to-orange-500 border-white/15 before:rounded-[1rem] before:absolute before:inset-0 before:border-t before:border-white before:border-white/20 before:bg-gradient-to-b before:from-white/10 before:to-transparent before:shadow before:shadow-gray-950;
+  }
+
+  p {
+    @apply text-sm text-white/60;
+  }
+
+  h3,
+  h4 {
+    @apply text-xl text-white font-bold;
+  }
+}
